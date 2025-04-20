@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de Comercios de Aldeano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Generador de Comercios de Aldeano (Minecraft Java)</h1>
+
+  <form id="form">
+    <label>Profesión:
+      <select id="profession">
+        <option value="farmer">Granjero</option>
+        <option value="librarian">Bibliotecario</option>
+        <option value="armorer">Herrero</option>
+      </select>
+    </label>
+
+    <label>Bioma:
+      <select id="biome">
+        <option value="plains">Llanuras</option>
+        <option value="taiga">Taiga</option>
+      </select>
+    </label>
+
+    <label>Nivel:
+      <select id="level">
+        <option value="1">Novato</option>
+        <option value="2">Aprendiz</option>
+        <option value="3">Oficial</option>
+        <option value="4">Experto</option>
+        <option value="5">Maestro</option>
+      </select>
+    </label>
+
+    <label>Objeto a comprar:
+      <input type="text" id="buy" placeholder="Ej: emerald">
+    </label>
+    <label>Cantidad:
+      <input type="number" id="buyCount" value="1" min="1" max="64">
+    </label>
+
+    <label>Objeto a vender:
+      <input type="text" id="sell" placeholder="Ej: book">
+    </label>
+    <label>Cantidad:
+      <input type="number" id="sellCount" value="1" min="1" max="64">
+    </label>
+
+    <fieldset>
+      <legend>Opciones:</legend>
+      <label><input type="checkbox" id="invuln"> Invulnerable</label>
+      <label><input type="checkbox" id="silent"> Silencioso</label>
+      <label><input type="checkbox" id="noai"> Sin IA</label>
+    </fieldset>
+
+    <button type="submit">Generar comando</button>
+  </form>
+
+  <h2>Comando generado:</h2>
+  <pre id="output"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>
